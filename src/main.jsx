@@ -36,6 +36,16 @@ class MyClassComponent extends React.Component {
   }
 }
 
-const elem = React.createElement(MyClassComponent)
+function MyFuncComponent() {
+  const heading = React.createElement('h2', {className: 'articleHeading'}, 'Class Component heading');
+
+    const textPar = React.createElement('p', null, '12345')
+
+    const article = React.createElement('article', null, heading, textPar)
+    
+    return article;
+}
+
+const elem = React.createElement(MyFuncComponent)
 
 createRoot(document.getElementById('root')).render(elem);
