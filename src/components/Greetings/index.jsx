@@ -23,19 +23,11 @@ class Greeting extends React.Component {
     // Умовний рендерінг - рендерінг певних елементів / компонентів за певною умовою
     const fullName = `${userFirstName} ${userLastName}`.trim();
 
-    if (fullName) {
-      return React.createElement(
-        "h1",
-        { className: "greetingText" },
-        `Hello, ${fullName}!`
-      );
-    } else {
-      return React.createElement(
-        "p",
-        { className: "guestGreeting" },
-        `Hello, Guest!`
-      );
-    }
+    return fullName ? (
+      <h1 className="greetingText">Hello {fullName}</h1>
+    ) : (
+      <p className="guestGreeting">Hello Guest</p>
+    );
 
     // return React.createElement(
     //   "p",
