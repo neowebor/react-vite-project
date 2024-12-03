@@ -12,32 +12,7 @@ const product = {
 };
 
 function App() {
-  const shouldClassComponentsRender = Math.random() > 0.5;
-
-  const funcElem1 = React.createElement(MyFuncComponent);
-  const funcElem2 = React.createElement(MyFuncComponent);
-
-  // if (shouldClassComponentsRender) {
-  //   return (
-  //     <>
-  //       <Greeting userFirstName="John" userLastName="Doe" />
-  //       <Greeting userFirstName="Sarah" />
-  //       <Greeting />
-  //       <MyClassComponent />
-  //       <MyClassComponent />
-  //     </>
-  //   );
-  // } else {
-  //   return (
-  //     <>
-  //       <Greeting userFirstName="John" userLastName="Doe" />
-  //       <Greeting userFirstName="Sarah" />
-  //       <Greeting />
-  //       <MyFuncComponent />
-  //       <MyFuncComponent />
-  //     </>
-  //   )
-  // }
+  // const shouldClassComponentsRender = Math.random() > 0.5;
 
   return (
     <>

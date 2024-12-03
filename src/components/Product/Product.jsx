@@ -8,6 +8,11 @@ class Product extends React.Component {
       isFavorite: true,
     };
   }
+
+  handleEvent = () => {
+    alert('click!')
+  }
+
   render() {
     const {
       product: { id, name, price, description },
@@ -23,7 +28,7 @@ class Product extends React.Component {
         {/* <p>{name} is {isFavorite ? '' : 'not'} favorite</p> */}
         <p>{name} is {!isFavorite && 'not'} favorite</p>
         {/* {isFavorite && <p>{name} is favorite</p>} */}
-        <button>Make product</button>
+        <button id="btn" onClick={this.handleEvent}>Make product</button>
       </article>
     );
   }
