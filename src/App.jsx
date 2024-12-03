@@ -41,11 +41,11 @@ function App() {
 
   return (
     <>
-      <Greeting userFirstName="John" userLastName="Doe" />
+      {/* <Greeting userFirstName="John" userLastName="Doe" />
       <Greeting userFirstName="Sarah" />
-      <Greeting />
+      <Greeting /> */}
       <Product product={product} />
-      {shouldClassComponentsRender ? <MyClassComponent /> : <MyFuncComponent />}
+      {/* {shouldClassComponentsRender ? <MyClassComponent /> : <MyFuncComponent />} */}
     </>
   );
 
