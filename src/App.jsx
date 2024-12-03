@@ -2,6 +2,14 @@ import React from "react";
 import Greeting from "./components/Greetings";
 import MyClassComponent from "./components/MyClassComponent";
 import MyFuncComponent from "./components/MyFuncComponent";
+import Product from "./components/Product/Product";
+
+const product = {
+  id: 0,
+  name: "Product 1",
+  price: 1234.33,
+  description: "Lorem Ipsum bla bla bla",
+};
 
 function App() {
   const shouldClassComponentsRender = Math.random() > 0.5;
@@ -36,6 +44,7 @@ function App() {
       <Greeting userFirstName="John" userLastName="Doe" />
       <Greeting userFirstName="Sarah" />
       <Greeting />
+      <Product product={product} />
       {shouldClassComponentsRender ? <MyClassComponent /> : <MyFuncComponent />}
     </>
   );
