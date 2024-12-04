@@ -33,7 +33,7 @@ function App() {
 
   return (
     <>
-      <ProductList products={products}/>
+      <ProductList products={products} />
       {/* <Greeting userFirstName="John" userLastName="Doe" />
       <Greeting userFirstName="Sarah" />
       <Greeting /> */}
