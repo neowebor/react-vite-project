@@ -10,10 +10,22 @@ class Product extends React.Component {
   }
 
   handleEvent = () => {
-    alert('click!')
+    // alert('click!')
+
+    // мутація стану. код не буде працювати
+    // this.state.isFavorite = true;
+
+    // функція зміни стану
+    // приймає об'єкт властивості якого доповнюють або перезаписують властивості стану
+    this.setState({
+      isFavorite: false,
+    })
   }
 
   render() {
+    // зміна стану викличе повторне відмалювання компоненту
+    // зміна пропсів також змушує ререндеритися компонент
+
     const {
       product: { id, name, price, description },
     } = this.props;
