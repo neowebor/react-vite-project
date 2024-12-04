@@ -1,25 +1,44 @@
 import React from "react";
-import Greeting from "./components/Greetings";
-import MyClassComponent from "./components/MyClassComponent";
-import MyFuncComponent from "./components/MyFuncComponent";
 import Product from "./components/Product/Product";
+import ProductList from "./components/ProductList/ProductList";
 
-const product = {
-  id: 0,
-  name: "Product 1",
-  price: 1234.33,
-  description: "Lorem Ipsum bla bla bla",
-};
+const products = [
+  {
+    id: 0,
+    name: "Product 1",
+    price: 1234.33,
+    description: "Lorem Ipsum bla bla bla",
+  },
+
+  {
+    id: 1,
+    name: "Product 2",
+    price: 1111,
+    description: "Lorem Ipsum bla bla bla HOLA HELLO",
+  },
+]
 
 function App() {
   // const shouldClassComponentsRender = Math.random() > 0.5;
 
+  // const components = new Array(5).fill(null).map(() => {
+  //   return <p>text</p>
+  // });
+
+  // console.log(components);
+  
+  // const productsComponents = products.map((product) => {
+  //   return <Product product={product} />
+  // })
+
   return (
     <>
+      <ProductList products={products}/>
       {/* <Greeting userFirstName="John" userLastName="Doe" />
       <Greeting userFirstName="Sarah" />
       <Greeting /> */}
-      <Product product={product} />
+      {/* <Product product={products[0]} />
+      <Product product={products[1]} /> */}
       {/* {shouldClassComponentsRender ? <MyClassComponent /> : <MyFuncComponent />} */}
     </>
   );
