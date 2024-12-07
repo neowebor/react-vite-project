@@ -1,15 +1,40 @@
-import React from 'react'
-import Product from '../Product/Product';
+import React from "react";
+import Product from "../Product/Product";
 
 class ProductList extends React.Component {
-  render () {
-    const {products} = this.props;
+  state = {
+    isReverseOrder: false,
+  };
+
+  handleSwitchOrder = () => {
+    this.setState({
+      isReverseOrder: !this.state.isReverseOrder,
+    });
+  };
+
+  render() {
+    const { products } = this.props;
+    const { isReverseOrder } = this.state;
 
     const productsComponents = products.map((product) => {
-      return <Product product={product} key={product.id}/>
-    })
+      // Взаємодія Батько - Дитина (пропси)
+      return (
+        <Product
+          product={product}
+          key={product.id}
+          handleSwitchOrder={this.handleSwitchOrder}
+        />
+      );
+    });
 
-    return <>{productsComponents}</>
+    return (
+      <article>
+        <h2>Products</h2>
+        <p>Sorting order: {isReverseOrder ? "reverse" : "straight"}</p>
+        <button onClick={this.handleSwitchOrder}>Switch order</button>
+        {isReverseOrder ? productsComponents.reverse() : productsComponents}
+      </article>
+    );
   }
 }
 

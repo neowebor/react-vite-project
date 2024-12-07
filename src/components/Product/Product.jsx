@@ -28,6 +28,7 @@ class Product extends React.Component {
 
     const {
       product: { id, name, price, description },
+      handleSwitchOrder
     } = this.props;
 
     const {isFavorite} = this.state;
@@ -41,6 +42,8 @@ class Product extends React.Component {
         <p>{name} is {!isFavorite && 'not'} favorite</p>
         {/* {isFavorite && <p>{name} is favorite</p>} */}
         <button id="btn" onClick={this.handleEvent}>Make product</button>
+        {/* Взаємодія Дитина -> Батько (коллбек, який змінює стан батька) */}
+        <button onClick={handleSwitchOrder}>Change Parent order</button>
       </article>
     );
   }

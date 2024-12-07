@@ -16,7 +16,14 @@ const products = [
     price: 1111,
     description: "Lorem Ipsum bla bla bla HOLA HELLO",
   },
-]
+
+  {
+    id: 2,
+    name: "Product 3",
+    price: 1112131231,
+    description: "bla bla HOLA HELLO",
+  },
+];
 
 function App() {
   // const shouldClassComponentsRender = Math.random() > 0.5;
@@ -24,12 +31,6 @@ function App() {
   // const components = new Array(5).fill(null).map(() => {
   //   return <p>text</p>
   // });
-
-  // console.log(components);
-  
-  // const productsComponents = products.map((product) => {
-  //   return <Product product={product} />
-  // })
 
   return (
     <>
