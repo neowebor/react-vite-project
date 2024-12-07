@@ -13,7 +13,7 @@ class ProductList extends React.Component {
   };
 
   render() {
-    const { products } = this.props;
+    const { products, toggleFavoriteProduct } = this.props;
     const { isReverseOrder } = this.state;
 
     const productsComponents = products.map((product) => {
@@ -23,6 +23,7 @@ class ProductList extends React.Component {
           product={product}
           key={product.id}
           handleSwitchOrder={this.handleSwitchOrder}
+          toggleFavoriteProduct={toggleFavoriteProduct}
         />
       );
     });
